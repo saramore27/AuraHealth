@@ -240,7 +240,7 @@ function buildYouTubeLinks(videos) {
   return videos
     .map(
       (v) =>
-        `<a class="yt-link" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener noreferrer">▶️ ${v.label}</a>`
+        `<a class="yt-link" href="https://www.youtube.com/watch?v=${encodeURIComponent(v.id)}" target="_blank" rel="noopener noreferrer">▶️ ${escapeHtml(v.label)}</a>`
     )
     .join(" ");
 }

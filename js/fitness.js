@@ -67,7 +67,7 @@ function renderWorkouts() {
         <span class="workout-badge">⏱ ${w.duration} min</span>
         ${w.calories ? `<span class="workout-badge">🔥 ${w.calories} kcal</span>` : ""}
         ${w.steps ? `<span class="workout-badge">👟 ${w.steps.toLocaleString()} steps</span>` : ""}
-        <button class="btn btn-ghost" onclick="deleteWorkout('${w.id}')" title="Delete">
+        <button class="btn btn-ghost delete-workout-btn" data-workout-id="${w.id}" title="Delete">
           <i class="fas fa-trash"></i>
         </button>
       </div>
@@ -128,11 +128,6 @@ function clearAllWorkouts() {
   showToast("All workouts cleared.");
 }
 
-/* ── Unique ID ──────────────────────────────────────────────── */
-function generateId() {
-  return Math.random().toString(36).slice(2, 9) + Date.now().toString(36);
-}
-
 /* ── Initialise ─────────────────────────────────────────────── */
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("workoutForm");
@@ -168,6 +163,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const clearBtn = document.getElementById("clearWorkoutsBtn");
   if (clearBtn) clearBtn.addEventListener("click", clearAllWorkouts);
+
+  // Event delegation for delete buttons
+  document.getElementById("workoutList")?.addEventListener("click", (e) => {
+    const btn = e.target.closest(".delete-workout-btn");
+    if (btn) deleteWorkout(btn.dataset.workoutId);
+  });
 
   renderWorkouts();
   updateFitnessStats();

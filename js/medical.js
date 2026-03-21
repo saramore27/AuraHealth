@@ -69,7 +69,7 @@ function renderMedicalRecords(filterType) {
         }
       </div>
       <div>
-        <button class="btn btn-ghost" onclick="deleteMedicalRecord('${r.id}')" title="Delete record">
+        <button class="btn btn-ghost delete-record-btn" data-record-id="${r.id}" title="Delete record">
           <i class="fas fa-trash"></i>
         </button>
       </div>
@@ -161,6 +161,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Clear all
   document.getElementById("clearMedicalBtn")?.addEventListener("click", clearAllMedical);
+
+  // Event delegation for delete buttons
+  document.getElementById("medicalList")?.addEventListener("click", (e) => {
+    const btn = e.target.closest(".delete-record-btn");
+    if (btn) deleteMedicalRecord(btn.dataset.recordId);
+  });
 
   renderMedicalRecords();
   updateMedicalStats();

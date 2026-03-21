@@ -190,7 +190,7 @@ const MODERN_TIPS = [
     rEl.innerHTML = `<h4>${result.title}</h4><p>${result.description}</p>`;
 
     document.getElementById("retakeQuizBtn").addEventListener("click", () => {
-      scores.Vata = 0; scores.Pitta = 0; scores.Kapha = 0;
+      Object.keys(scores).forEach((k) => { scores[k] = 0; });
       currentQ = 0;
       rEl.classList.add("hidden");
       rEl.innerHTML = "";

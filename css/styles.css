@@ -760,9 +760,14 @@ img { max-width: 100%; }
 
 /* Overlay for mobile sidebar */
 .sidebar-overlay {
-  display: none;
   position: fixed; inset: 0;
   background: rgba(0,0,0,.4);
   z-index: 150;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
 }
-.sidebar-overlay.visible { display: block; }
+.sidebar-overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}
