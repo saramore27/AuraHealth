@@ -1,2 +1,86 @@
-# AuraHealth
-AuraHealth is a holistic health platform offering ayurvedic &amp; modern solutions, fitness tracking, yoga/mudra guidance, and an AI chatbot for symptom insights, navigation, and YouTube recommendations. Users can store medical history digitally. Planned: wearables integration, personalized tips, community forums, and expert partnerships.
+# 🌿 AuraHealth
+
+AuraHealth is a holistic health platform offering ayurvedic & modern solutions, fitness tracking, yoga/mudra guidance, and an AI chatbot for symptom insights, navigation, and YouTube recommendations. Users can store medical history digitally.
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---|---|
+| 🌿 **Ayurveda & Modern Solutions** | Dosha quiz, ayurvedic herb profiles, and modern health tips |
+| 🏃 **Fitness Tracker** | Log workouts (type, duration, calories, steps); view today's stats and full history |
+| 🧘 **Yoga & Mudra Guidance** | Step-by-step yoga poses, mudras, and breathing exercises with modal detail views |
+| 🤖 **AI Health Chatbot** | Symptom insights, app navigation commands, and curated YouTube health recommendations |
+| 📋 **Medical History** | Store, filter, and manage health records (diagnoses, prescriptions, lab results, etc.) locally |
+
+---
+
+## 🚀 Getting Started
+
+AuraHealth is a **pure frontend application** — no server or build step required.
+
+### Run Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/saramore27/AuraHealth.git
+   cd AuraHealth
+   ```
+2. Open `index.html` in any modern browser:
+   ```bash
+   open index.html          # macOS
+   xdg-open index.html      # Linux
+   start index.html         # Windows
+   ```
+   Or use a simple local server (recommended for full CDN font/icon loading):
+   ```bash
+   npx serve .
+   # then visit http://localhost:3000
+   ```
+
+---
+
+## 🗂️ Project Structure
+
+```
+AuraHealth/
+├── index.html          # Main single-page application
+├── css/
+│   └── styles.css      # All application styles
+├── js/
+│   ├── app.js          # Core app: navigation, utilities (escapeHtml, formatDate, showToast)
+│   ├── ayurveda.js     # Dosha quiz, herbal remedies, modern health tips
+│   ├── fitness.js      # Workout logging and stats (localStorage)
+│   ├── yoga.js         # Yoga poses, mudras, breathing exercises
+│   ├── chatbot.js      # AI chatbot: symptom DB, YouTube recommendations, navigation
+│   └── medical.js      # Medical history CRUD (localStorage)
+└── README.md
+```
+
+---
+
+## 🤖 Chatbot Capabilities
+
+| Input Example | Response |
+|---|---|
+| `headache`, `stress`, `fatigue`, … | Symptom insights + ayurvedic tips + YouTube links |
+| `yoga videos`, `meditation videos` | Curated YouTube recommendations |
+| `open fitness`, `go to yoga`, … | Navigate to any section |
+| `tips`, `help` | General health advice |
+
+---
+
+## 💾 Data Storage
+
+All user data (workouts, medical records) is stored in the **browser's localStorage** — no data leaves your device.
+
+---
+
+## 🔮 Planned Features
+
+- Wearables integration (heart rate, steps sync)
+- Personalised daily health tips
+- Community forums
+- Expert partnerships & teleconsultation
+- Progressive Web App (PWA) support

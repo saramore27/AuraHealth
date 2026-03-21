@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AuraHealth – Holistic Health Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       SIDEBAR NAVIGATION
+  ═══════════════════════════════════════════════ -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-icon">🌿</span>
+      <span class="brand-name">AuraHealth</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" class="nav-link active" data-section="dashboard">
+        <i class="fas fa-home"></i><span>Dashboard</span>
+      </a></li>
+      <li><a href="#" class="nav-link" data-section="ayurveda">
+        <i class="fas fa-leaf"></i><span>Ayurveda &amp; Modern</span>
+      </a></li>
+      <li><a href="#" class="nav-link" data-section="fitness">
+        <i class="fas fa-dumbbell"></i><span>Fitness Tracker</span>
+      </a></li>
+      <li><a href="#" class="nav-link" data-section="yoga">
+        <i class="fas fa-spa"></i><span>Yoga &amp; Mudra</span>
+      </a></li>
+      <li><a href="#" class="nav-link" data-section="chatbot">
+        <i class="fas fa-robot"></i><span>AI Health Chatbot</span>
+      </a></li>
+      <li><a href="#" class="nav-link" data-section="medical">
+        <i class="fas fa-file-medical"></i><span>Medical History</span>
+      </a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <span>v1.0 &mdash; Stay Balanced 🙏</span>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       TOP HEADER
+  ═══════════════════════════════════════════════ -->
+  <header class="top-bar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <h1 class="page-title" id="pageTitle">Dashboard</h1>
+    <div class="header-actions">
+      <div class="user-avatar" title="Your Profile">A</div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════════════════ -->
+  <main class="main-content" id="mainContent">
+
+    <!-- ─── DASHBOARD SECTION ─── -->
+    <section id="dashboard" class="section active">
+      <div class="welcome-banner">
+        <div class="welcome-text">
+          <h2>Welcome to <span class="accent">AuraHealth</span> 🌿</h2>
+          <p>Your holistic health companion — blending ancient wisdom with modern science.</p>
+        </div>
+        <div class="welcome-art">🧘</div>
+      </div>
+
+      <!-- Quick-stat cards -->
+      <div class="stats-grid" id="dashboardStats">
+        <div class="stat-card" data-section="fitness">
+          <div class="stat-icon"><i class="fas fa-fire"></i></div>
+          <div class="stat-info">
+            <span class="stat-value" id="statCalories">0</span>
+            <span class="stat-label">Calories Burned</span>
+          </div>
+        </div>
+        <div class="stat-card" data-section="fitness">
+          <div class="stat-icon steps"><i class="fas fa-shoe-prints"></i></div>
+          <div class="stat-info">
+            <span class="stat-value" id="statSteps">0</span>
+            <span class="stat-label">Steps Today</span>
+          </div>
+        </div>
+        <div class="stat-card" data-section="fitness">
+          <div class="stat-icon workouts"><i class="fas fa-dumbbell"></i></div>
+          <div class="stat-info">
+            <span class="stat-value" id="statWorkouts">0</span>
+            <span class="stat-label">Workouts Logged</span>
+          </div>
+        </div>
+        <div class="stat-card" data-section="medical">
+          <div class="stat-icon records"><i class="fas fa-file-medical"></i></div>
+          <div class="stat-info">
+            <span class="stat-value" id="statRecords">0</span>
+            <span class="stat-label">Medical Records</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature cards grid -->
+      <h3 class="section-heading">Explore AuraHealth</h3>
+      <div class="feature-grid">
+        <div class="feature-card" data-section="ayurveda">
+          <div class="feature-card-icon">🌿</div>
+          <h4>Ayurveda &amp; Modern Solutions</h4>
+          <p>Discover dosha-based remedies, herbal treatments, and evidence-based modern health tips.</p>
+          <button class="btn btn-outline">Explore</button>
+        </div>
+        <div class="feature-card" data-section="fitness">
+          <div class="feature-card-icon">🏃</div>
+          <h4>Fitness Tracker</h4>
+          <p>Log workouts, track steps and calories, and monitor your fitness progress over time.</p>
+          <button class="btn btn-outline">Start Tracking</button>
+        </div>
+        <div class="feature-card" data-section="yoga">
+          <div class="feature-card-icon">🧘</div>
+          <h4>Yoga &amp; Mudra Guidance</h4>
+          <p>Step-by-step yoga poses and mudra (hand gesture) techniques for mind-body balance.</p>
+          <button class="btn btn-outline">Begin Practice</button>
+        </div>
+        <div class="feature-card" data-section="chatbot">
+          <div class="feature-card-icon">🤖</div>
+          <h4>AI Health Chatbot</h4>
+          <p>Get symptom insights, navigate the app, and receive curated YouTube health recommendations.</p>
+          <button class="btn btn-outline">Chat Now</button>
+        </div>
+        <div class="feature-card" data-section="medical">
+          <div class="feature-card-icon">📋</div>
+          <h4>Medical History</h4>
+          <p>Safely store and manage your medical records, prescriptions, and health reports digitally.</p>
+          <button class="btn btn-outline">View Records</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── AYURVEDA & MODERN SOLUTIONS SECTION ─── -->
+    <section id="ayurveda" class="section">
+      <h2 class="section-title">🌿 Ayurveda &amp; Modern Solutions</h2>
+      <p class="section-subtitle">Bridging ancient Ayurvedic wisdom with evidence-based modern medicine.</p>
+
+      <!-- Dosha Quiz -->
+      <div class="card dosha-quiz-card">
+        <h3><i class="fas fa-search"></i> Discover Your Dosha</h3>
+        <p>Ayurveda identifies three life energies (<em>doshas</em>): <strong>Vata</strong>, <strong>Pitta</strong>, and <strong>Kapha</strong>. Find yours:</p>
+        <div class="dosha-quiz" id="doshaQuiz">
+          <div class="quiz-question" id="quizQuestion"></div>
+          <div class="quiz-options" id="quizOptions"></div>
+          <div class="quiz-result hidden" id="quizResult"></div>
+        </div>
+      </div>
+
+      <!-- Ayurvedic Remedies -->
+      <h3 class="section-heading">Ayurvedic Remedies &amp; Herbs</h3>
+      <div class="remedy-grid" id="remedyGrid"></div>
+
+      <!-- Modern Health Tips -->
+      <h3 class="section-heading">Modern Health Insights</h3>
+      <div class="tips-grid" id="modernTipsGrid"></div>
+    </section>
+
+    <!-- ─── FITNESS TRACKER SECTION ─── -->
+    <section id="fitness" class="section">
+      <h2 class="section-title">🏃 Fitness Tracker</h2>
+      <p class="section-subtitle">Log your workouts, steps, and calories to stay on top of your fitness goals.</p>
+
+      <!-- Log Workout Form -->
+      <div class="card">
+        <h3><i class="fas fa-plus-circle"></i> Log a Workout</h3>
+        <form id="workoutForm" class="form-grid" novalidate>
+          <div class="form-group">
+            <label for="workoutType">Activity Type</label>
+            <select id="workoutType" required>
+              <option value="">Select activity…</option>
+              <option value="Running">🏃 Running</option>
+              <option value="Walking">🚶 Walking</option>
+              <option value="Cycling">🚴 Cycling</option>
+              <option value="Swimming">🏊 Swimming</option>
+              <option value="Yoga">🧘 Yoga</option>
+              <option value="Strength Training">💪 Strength Training</option>
+              <option value="HIIT">🔥 HIIT</option>
+              <option value="Dance">💃 Dance</option>
+              <option value="Other">⚡ Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="workoutDuration">Duration (minutes)</label>
+            <input type="number" id="workoutDuration" min="1" max="600" placeholder="e.g. 30" required />
+          </div>
+          <div class="form-group">
+            <label for="workoutCalories">Calories Burned</label>
+            <input type="number" id="workoutCalories" min="0" max="5000" placeholder="e.g. 250" />
+          </div>
+          <div class="form-group">
+            <label for="workoutSteps">Steps (optional)</label>
+            <input type="number" id="workoutSteps" min="0" max="100000" placeholder="e.g. 5000" />
+          </div>
+          <div class="form-group form-group-full">
+            <label for="workoutNotes">Notes</label>
+            <input type="text" id="workoutNotes" placeholder="How did it feel?" maxlength="200" />
+          </div>
+          <div class="form-group form-group-full">
+            <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Log Workout</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Today's Stats -->
+      <div class="fitness-stats-row">
+        <div class="fitness-stat-box">
+          <i class="fas fa-fire"></i>
+          <span class="fsb-value" id="todayCalories">0</span>
+          <span class="fsb-label">Calories Today</span>
+        </div>
+        <div class="fitness-stat-box">
+          <i class="fas fa-shoe-prints"></i>
+          <span class="fsb-value" id="todaySteps">0</span>
+          <span class="fsb-label">Steps Today</span>
+        </div>
+        <div class="fitness-stat-box">
+          <i class="fas fa-clock"></i>
+          <span class="fsb-value" id="todayMinutes">0</span>
+          <span class="fsb-label">Active Minutes</span>
+        </div>
+        <div class="fitness-stat-box">
+          <i class="fas fa-list-check"></i>
+          <span class="fsb-value" id="todayWorkouts">0</span>
+          <span class="fsb-label">Sessions</span>
+        </div>
+      </div>
+
+      <!-- Workout History -->
+      <div class="card">
+        <div class="card-header-row">
+          <h3><i class="fas fa-history"></i> Workout History</h3>
+          <button class="btn btn-sm btn-danger" id="clearWorkoutsBtn">
+            <i class="fas fa-trash"></i> Clear All
+          </button>
+        </div>
+        <div id="workoutList" class="workout-list">
+          <p class="empty-state">No workouts logged yet. Add your first workout above! 💪</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── YOGA & MUDRA SECTION ─── -->
+    <section id="yoga" class="section">
+      <h2 class="section-title">🧘 Yoga &amp; Mudra Guidance</h2>
+      <p class="section-subtitle">Cultivate inner balance with guided yoga poses and healing mudras.</p>
+
+      <!-- Tabs -->
+      <div class="tab-bar">
+        <button class="tab-btn active" data-tab="yoga-poses">Yoga Poses</button>
+        <button class="tab-btn" data-tab="mudras">Mudras</button>
+        <button class="tab-btn" data-tab="breathing">Breathing Exercises</button>
+      </div>
+
+      <div id="yoga-poses" class="tab-content active">
+        <div class="search-bar">
+          <input type="text" id="poseSearch" placeholder="Search yoga poses…" />
+          <select id="poseFilter">
+            <option value="">All Levels</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+          </select>
+        </div>
+        <div class="yoga-grid" id="yogaGrid"></div>
+      </div>
+
+      <div id="mudras" class="tab-content">
+        <div class="yoga-grid" id="mudraGrid"></div>
+      </div>
+
+      <div id="breathing" class="tab-content">
+        <div class="yoga-grid" id="breathingGrid"></div>
+      </div>
+    </section>
+
+    <!-- ─── AI CHATBOT SECTION ─── -->
+    <section id="chatbot" class="section">
+      <h2 class="section-title">🤖 AI Health Chatbot</h2>
+      <p class="section-subtitle">Ask about symptoms, get health tips, or let the bot recommend YouTube resources.</p>
+
+      <div class="chatbot-wrapper">
+        <!-- Chat messages window -->
+        <div class="chat-window" id="chatWindow">
+          <div class="chat-message bot-message">
+            <div class="chat-avatar bot-avatar">🤖</div>
+            <div class="chat-bubble">
+              <p>Hello! I'm <strong>AuraBot</strong>, your AI health assistant 🌿</p>
+              <p>I can help you with:</p>
+              <ul>
+                <li>💊 <strong>Symptom insights</strong> — describe what you're feeling</li>
+                <li>🧭 <strong>Navigation</strong> — ask me to open any section</li>
+                <li>▶️ <strong>YouTube recommendations</strong> — type "yoga videos", "meditation videos", etc.</li>
+                <li>💡 <strong>Health tips</strong> — type "tips" or ask about specific topics</li>
+              </ul>
+              <p>How can I assist you today?</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick-action chips -->
+        <div class="chat-chips" id="chatChips">
+          <button class="chip" data-msg="headache">😣 Headache</button>
+          <button class="chip" data-msg="stress">😰 Stress</button>
+          <button class="chip" data-msg="sleep">😴 Sleep issues</button>
+          <button class="chip" data-msg="yoga videos">🧘 Yoga videos</button>
+          <button class="chip" data-msg="meditation videos">🧘 Meditation</button>
+          <button class="chip" data-msg="nutrition tips">🥗 Nutrition tips</button>
+          <button class="chip" data-msg="open fitness">🏃 Fitness Tracker</button>
+          <button class="chip" data-msg="open medical">📋 Medical History</button>
+        </div>
+
+        <!-- Input bar -->
+        <div class="chat-input-bar">
+          <input type="text" id="chatInput" placeholder="Type your message…" maxlength="500" autocomplete="off" />
+          <button class="btn btn-primary send-btn" id="chatSendBtn">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── MEDICAL HISTORY SECTION ─── -->
+    <section id="medical" class="section">
+      <h2 class="section-title">📋 Medical History</h2>
+      <p class="section-subtitle">Securely store and manage your health records, prescriptions, and lab results.</p>
+
+      <!-- Add Record Form -->
+      <div class="card">
+        <h3><i class="fas fa-plus-circle"></i> Add New Record</h3>
+        <form id="medicalForm" class="form-grid" novalidate>
+          <div class="form-group">
+            <label for="recordType">Record Type</label>
+            <select id="recordType" required>
+              <option value="">Select type…</option>
+              <option value="Diagnosis">🩺 Diagnosis</option>
+              <option value="Prescription">💊 Prescription / Medication</option>
+              <option value="Lab Result">🧪 Lab Result</option>
+              <option value="Vaccination">💉 Vaccination</option>
+              <option value="Allergy">⚠️ Allergy</option>
+              <option value="Surgery">🏥 Surgery / Procedure</option>
+              <option value="Vital Signs">❤️ Vital Signs</option>
+              <option value="Other">📄 Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="recordDate">Date</label>
+            <input type="date" id="recordDate" required />
+          </div>
+          <div class="form-group">
+            <label for="recordTitle">Title / Condition</label>
+            <input type="text" id="recordTitle" placeholder="e.g. Hypertension Diagnosis" required maxlength="100" />
+          </div>
+          <div class="form-group">
+            <label for="recordDoctor">Doctor / Hospital</label>
+            <input type="text" id="recordDoctor" placeholder="e.g. Dr. Smith, City Hospital" maxlength="100" />
+          </div>
+          <div class="form-group form-group-full">
+            <label for="recordDetails">Details / Notes</label>
+            <textarea id="recordDetails" rows="3" placeholder="Enter details, dosage, results, etc." maxlength="1000"></textarea>
+          </div>
+          <div class="form-group form-group-full">
+            <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save Record</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Filter & Records List -->
+      <div class="card">
+        <div class="card-header-row">
+          <h3><i class="fas fa-folder-open"></i> Your Records</h3>
+          <div class="card-header-actions">
+            <select id="medicalFilter">
+              <option value="">All Types</option>
+              <option value="Diagnosis">Diagnosis</option>
+              <option value="Prescription">Prescription</option>
+              <option value="Lab Result">Lab Result</option>
+              <option value="Vaccination">Vaccination</option>
+              <option value="Allergy">Allergy</option>
+              <option value="Surgery">Surgery</option>
+              <option value="Vital Signs">Vital Signs</option>
+              <option value="Other">Other</option>
+            </select>
+            <button class="btn btn-sm btn-danger" id="clearMedicalBtn">
+              <i class="fas fa-trash"></i> Clear All
+            </button>
+          </div>
+        </div>
+        <div id="medicalList" class="medical-list">
+          <p class="empty-state">No medical records added yet. Start by adding your first record above! 📋</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Modal for Yoga/Pose Details -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="js/ayurveda.js"></script>
+  <script src="js/fitness.js"></script>
+  <script src="js/yoga.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/medical.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
